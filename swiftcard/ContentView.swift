@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showCardFront = false
+//    @State var selectedCard =
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Image(.parchment)
+                .resizable()
+                .ignoresSafeArea()
+                .background()
+            VStack {
+                Text("Select a card")
+                
+                LazyVGrid(columns: [GridItem()], content: {
+                    /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                    /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                })
+            }
         }
-        .padding()
     }
 }
 
